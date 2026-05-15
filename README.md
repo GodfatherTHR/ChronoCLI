@@ -1,85 +1,63 @@
 # ChronoCLI ⏱️🚀
 
-**ChronoCLI** is a modern, terminal-first productivity and time-tracking tool built for freelancers, developers, and students. It combines powerful tracking capabilities with AI-driven insights powered by the Groq API.
+[![PyPI version](https://img.shields.io/pypi/v/chronocli.svg)](https://pypi.org/project/chronocli/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 
-## 🌟 Features
+**ChronoCLI** is a professional, AI-powered command-line time tracker designed for modern workflows. It combines a beautiful TUI dashboard with deep productivity insights powered by Groq's Llama-3.3.
 
-- **Precise Tracking**: Start, stop, and manage sessions with simple CLI commands.
-- **AI Insights**: Personalized productivity coaching, weekly analysis, and natural language command processing.
-- **Modern Dashboard**: A beautiful, interactive TUI dashboard built with `Textual`.
-- **Rich Reports**: Daily, weekly, and monthly reports with visual tables and stats.
-- **Exporting**: Export your data to production-ready CSV and PDF formats.
-- **Offline First**: Works fully offline using SQLite; AI features are optional.
+![ChronoCLI Dashboard](docs/dashboard.png)
 
-## 🚀 Installation
+## ✨ Features
 
-### From PyPI (Recommended)
+- **🎯 Precise Tracking**: Effortless session management with smart start/stop commands.
+- **🤖 AI productivity Coach**: Personalized feedback and burnout warnings based on your data.
+- **📊 Interactive TUI**: A premium terminal dashboard built with `Textual`.
+- **📈 Advanced Analytics**: Weekly AI summaries and detailed productivity reports.
+- **📁 Professional Exports**: Generate sleek PDF and CSV reports for clients or personal tracking.
+- **🔒 Privacy First**: Your data stays local in a SQLite database; AI analysis is secure via Groq.
+
+## 🚀 Quick Start
+
+### 1. Installation
 ```bash
 pip install chronocli
 ```
 
-### From Source
+### 2. Setup
+Add your Groq API Key to your environment or a `.env` file:
 ```bash
-git clone https://github.com/yourusername/ChronoCLI.git
-cd ChronoCLI
-pip install -e .
-```
-
-## ⚙️ Configuration
-Create a `.env` file in your project directory (or in the package location) and add your Groq API Key:
-```env
 GROQ_API_KEY=your_api_key_here
 ```
 
-## 📖 Usage
-
-### Core Commands
+### 3. Usage
 ```bash
 # Start a task
-chronocli track start "Coding New Feature" --category "Development"
-
-# Check status
-chronocli track status
+chronocli track start "Designing UI" --category "Design"
 
 # Stop current task
 chronocli track stop
 
-# Launch the interactive TUI Dashboard
+# Launch the Dashboard
 chronocli dashboard
 ```
 
-### AI Powered Features
-```bash
-# Get personalized coaching
-chronocli coach
+## 🧠 AI Commands
+ChronoCLI isn't just a timer; it's a coach.
 
-# AI analysis of your week
-chronocli ai-weekly
+- `chronocli coach`: Get a deep dive into your work habits.
+- `chronocli ai-weekly`: A structured breakdown of your weekly performance.
+- `chronocli ask "What is my most productive hour?"`: Query your data using natural language.
 
-# Ask a specific question about your data
-chronocli ask "What time do I usually start working?"
-```
-
-### Reporting & Exporting
-```bash
-# View reports
-chronocli report --type weekly
-
-# Export data
-chronocli export --format pdf
-```
-
-## 🛠️ Project Structure
-```
-chronocli/
-├── ai/          # Groq API integration
-├── cli/         # Typer command definitions
-├── dashboard/   # Textual TUI app
-├── database/    # SQLite & SQLModel logic
-├── models/      # Data models
-├── reports/     # Analytics engine
-└── utils/       # Helpers (Git integration, etc.)
-```
+## 🛠️ Tech Stack
+- **CLI Framework**: [Typer](https://typer.tiangolo.com/)
+- **UI Engine**: [Textual](https://textual.textualize.io/)
+- **Data Layer**: [SQLModel](https://sqlmodel.tiangolo.com/)
+- **AI Integration**: [Groq Cloud](https://groq.com/)
+- **Formatting**: [Rich](https://rich.readthedocs.io/)
 
 ## 📜 License
-MIT License.
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+Built with ❤️ for the terminal community.
